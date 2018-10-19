@@ -15,62 +15,102 @@ var mutiplicar = document.getElementById('por');
 var dividir = document.getElementById('dividido');
 var punto = document.getElementById('punto');
 var limpiar = document.getElementById('on');
+var signo = document.getElementById('sign');
 
-uno.onclick = function(e){
-  if (resultado.textContent = "0"){
-    resultado.textContent = "1"
+uno.onclick = function(e){  
+  if (resultado.textContent == "0"){
+      resultado.textContent = "1";
   } else{
-    resultado.textContent = resultado.textContent  + "1"
-  }
-  return resultado;
+    resultado.textContent = resultado.textContent  + "1";
+    }
 }
+
 dos.onclick = function(e){
-  if (resultado.textContent = "0"){
+  if (resultado.textContent == "0"){
     resultado.textContent = "2"
   } else{
     resultado.textContent = resultado.textContent  + "2"
   }
-  return resultado;
 }
 tres.onclick = function(e){
-
-    resultado.textContent = resultado.textContent  + "3";
-
+  if (resultado.textContent == "0"){
+    resultado.textContent = "3"
+  } else{
+    resultado.textContent = resultado.textContent  + "3"
+  }
 }
 cuatro.onclick = function(e){
-
-    resultado.textContent = resultado.textContent  + "4";
-
+  if (resultado.textContent == "0"){
+    resultado.textContent = "4"
+  } else{
+    resultado.textContent = resultado.textContent  + "4"
+  }
 }
 cinco.onclick = function(e){
-
-    resultado.textContent = resultado.textContent  + "5";
-
+  if (resultado.textContent == "0"){
+    resultado.textContent = "5"
+  } else{
+    resultado.textContent = resultado.textContent  + "5"
+  }
 }
 seis.onclick = function(e){
-
-    resultado.textContent = resultado.textContent  + "6";
-
+  if (resultado.textContent == "0"){
+    resultado.textContent = "6"
+  } else{
+    resultado.textContent = resultado.textContent  + "6"
+  }
 }
 siete.onclick = function(e){
-
-    resultado.textContent = resultado.textContent  + "7";
-
+  if (resultado.textContent == "0"){
+    resultado.textContent = "7"
+  } else{
+    resultado.textContent = resultado.textContent  + "7"
+  }
 }
 ocho.onclick = function(e){
-
-    resultado.textContent = resultado.textContent  + "8";
-
+  if (resultado.textContent == "0"){
+    resultado.textContent = "8"
+  } else{
+    resultado.textContent = resultado.textContent  + "8"
+  }
 }
 nueve.onclick = function(e){
-
-    resultado.textContent = resultado.textContent  + "9";
-
+  if (resultado.textContent == "0"){
+    resultado.textContent = "9"
+  } else{
+    resultado.textContent = resultado.textContent  + "9"
+  }
 }
 punto.onclick = function(e){
+  posicion = resultado.textContent;
+  if (posicion.indexOf(".") == -1){
     resultado.textContent = resultado.textContent  + ".";
+  } else{
+    alert("No se puede ingresar mas puntos decimales");
+  }
 
 }
+cero.onclick = function(e){
+  if (resultado.textContent == "0"){
+    resultado.textContent = "0"
+  } else{
+    resultado.textContent = resultado.textContent  + "0"
+  }
+}
+signo.onclick = function(e){
+  if (resultado.textContent != "0") {
+    var valor = resultado.textContent;
+      if(valor.indexOf('-') == 0)
+        valor = valor.substring(1);
+      else
+        valor = '-' + valor;
+      resultado.textContent = valor;
+  } else{
+    resultado.textContent = "0"
+  }
+
+}
+
 limpiar.onclick = function(e){
     resultado.textContent = "0";
 }
