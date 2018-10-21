@@ -12,10 +12,44 @@ var limpiar = document.getElementById("on");
 var puntop = document.getElementById("punto");
 var signo = document.getElementById("sign");
 var pantalla = "0";
+var operacion = "0";
+var numero1 = "0";
+var numero2 = "0";
+var suma = document.getElementById("mas");
+var resta = document.getElementById("menos");
+var mult = document.getElementById("por");
+var dividir = document.getElementById("dividido");
+var igualres = document.getElementById("igual");
 
 limpiar.addEventListener('click', function(){
   document.getElementById("display").innerHTML = "0";
+  numero1 = "0";
+  numero2 = "0";
+  operacion = "";
 })
+
+function calcular(resultado){
+  var res = 0;
+  switch(operacion){
+    case "+":
+      res = parseFloat(numero1) + parseFloat(numero2);
+      break;
+    case "-":
+    res = parseFloat(numero1) - parseFloat(numero2);
+    break;
+    case "x":
+      res = parseFloat(numero1) * parseFloat(numero2);
+      break;
+    case "/":
+      res = parseFloat(numero1) / parseFloat(numero2);
+      break;
+  }
+  document.getElementById("display").innerHTML = res;
+}
+
+function limpiars(){
+  document.getElementById("display").innerHTML = ""
+}
 
 function validar(texto){
 	if (texto.length >7){ //si el texo es mayor a 8
@@ -147,4 +181,30 @@ signo.addEventListener('click', function(){
   } else{
     document.getElementById("display").innerHTML = "0"
   }
+})
+
+suma.addEventListener('click', function(){
+  numero1 = document.getElementById("display").innerHTML;
+  operacion = "+";
+  limpiars();
+})
+resta.addEventListener('click', function(){
+  numero1 = document.getElementById("display").innerHTML;
+  operacion = "-";
+  limpiars();
+})
+mult.addEventListener('click', function(){
+  numero1 = document.getElementById("display").innerHTML;
+  operacion = "x";
+  limpiars();
+})
+dividir.addEventListener('click', function(){
+  numero1 = document.getElementById("display").innerHTML;
+  operacion = "/";
+  limpiars();
+})
+
+igualres.addEventListener('click', function(){
+  numero2 = document.getElementById("display").innerHTML;
+  calcular();
 })
