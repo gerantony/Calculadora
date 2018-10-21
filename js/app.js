@@ -1,3 +1,4 @@
+//VARIABLES-----------------------------------------------
 var uno1 = document.getElementById("1");
 var dos2 = document.getElementById("2");
 var tres3 = document.getElementById("3");
@@ -21,6 +22,7 @@ var mult = document.getElementById("por");
 var dividir = document.getElementById("dividido");
 var igualres = document.getElementById("igual");
 
+// FUNCIONES------------------------------------
 limpiar.addEventListener('click', function(){
   document.getElementById("display").innerHTML = "0";
   numero1 = "0";
@@ -44,7 +46,14 @@ function calcular(resultado){
       res = parseFloat(numero1) / parseFloat(numero2);
       break;
   }
-  document.getElementById("display").innerHTML = res;
+  pantalla = document.getElementById("display").innerHTML; //en caso haya operaciones con decimales
+  validar(pantalla);
+  if (pantalla.indexOf(".") == -1){
+     document.getElementById("display").innerHTML = res;
+   } else{
+     document.getElementById("display").innerHTML = res.toFixed(4);
+   }
+
 }
 
 function limpiars(){
@@ -58,8 +67,18 @@ function validar(texto){
     document.getElementById("display").innerHTML = texto;
 	}
 }
+function cambiar() {
+    document.getElementById("1").style.height = "50px";
+    document.getElementById("1").style.fontSize = "4em";
+}
+function cambiar2() {
+    document.getElementById("1").style.height = "62.91px";
+    document.getElementById("1").style.fontSize = "6em";
+}
 
+//LISTENER DE LOS BOTONES------------------------------
 uno1.addEventListener('click', function(){
+    uno1.addEventListener("onclick", cambiar());
     pantalla = document.getElementById("display").innerHTML;
     validar(pantalla);
     if (pantalla == '0'){
@@ -67,6 +86,7 @@ uno1.addEventListener('click', function(){
     } else {
       document.getElementById("display").innerHTML =  pantalla + "1";
     }
+    uno1.addEventListener("mouseup", cambiar2());
 })
 
 dos2.addEventListener('click', function(){
