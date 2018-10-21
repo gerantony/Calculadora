@@ -1,116 +1,131 @@
-var resultado = document.getElementById('display');
-var uno = document.getElementById('1');
-var dos = document.getElementById('2');
-var tres = document.getElementById('3');
-var cuatro = document.getElementById('4');
-var cinco = document.getElementById('5');
-var seis = document.getElementById('6');
-var siete = document.getElementById('7');
-var ocho = document.getElementById('8');
-var nueve = document.getElementById('9');
-var cero = document.getElementById('0');
-var sumar = document.getElementById('mas');
-var restar = document.getElementById('menos');
-var mutiplicar = document.getElementById('por');
-var dividir = document.getElementById('dividido');
-var punto = document.getElementById('punto');
-var limpiar = document.getElementById('on');
-var signo = document.getElementById('sign');
+var uno1 = document.getElementById("1");
+var dos2 = document.getElementById("2");
+var tres3 = document.getElementById("3");
+var cuatro4 = document.getElementById("4");
+var cinco5 = document.getElementById("5");
+var seis6 = document.getElementById("6");
+var siete7 = document.getElementById("7");
+var ocho8 = document.getElementById("8");
+var nueve9 = document.getElementById("9");
+var cero = document.getElementById("0");
+var limpiar = document.getElementById("on");
+var puntop = document.getElementById("punto");
+var signo = document.getElementById("sign");
+var pantalla = "0";
 
-uno.onclick = function(e){  
-  if (resultado.textContent == "0"){
-      resultado.textContent = "1";
-  } else{
-    resultado.textContent = resultado.textContent  + "1";
-    }
-}
+limpiar.addEventListener('click', function(){
+  document.getElementById("display").innerHTML = "0";
+})
 
-dos.onclick = function(e){
-  if (resultado.textContent == "0"){
-    resultado.textContent = "2"
-  } else{
-    resultado.textContent = resultado.textContent  + "2"
+uno1.addEventListener('click', function(){
+  pantalla = document.getElementById("display").innerHTML;
+  if (pantalla == '0'){
+    document.getElementById("display").innerHTML = "1";
+  } else {
+    document.getElementById("display").innerHTML =  pantalla + "1";
   }
-}
-tres.onclick = function(e){
-  if (resultado.textContent == "0"){
-    resultado.textContent = "3"
-  } else{
-    resultado.textContent = resultado.textContent  + "3"
-  }
-}
-cuatro.onclick = function(e){
-  if (resultado.textContent == "0"){
-    resultado.textContent = "4"
-  } else{
-    resultado.textContent = resultado.textContent  + "4"
-  }
-}
-cinco.onclick = function(e){
-  if (resultado.textContent == "0"){
-    resultado.textContent = "5"
-  } else{
-    resultado.textContent = resultado.textContent  + "5"
-  }
-}
-seis.onclick = function(e){
-  if (resultado.textContent == "0"){
-    resultado.textContent = "6"
-  } else{
-    resultado.textContent = resultado.textContent  + "6"
-  }
-}
-siete.onclick = function(e){
-  if (resultado.textContent == "0"){
-    resultado.textContent = "7"
-  } else{
-    resultado.textContent = resultado.textContent  + "7"
-  }
-}
-ocho.onclick = function(e){
-  if (resultado.textContent == "0"){
-    resultado.textContent = "8"
-  } else{
-    resultado.textContent = resultado.textContent  + "8"
-  }
-}
-nueve.onclick = function(e){
-  if (resultado.textContent == "0"){
-    resultado.textContent = "9"
-  } else{
-    resultado.textContent = resultado.textContent  + "9"
-  }
-}
-punto.onclick = function(e){
-  posicion = resultado.textContent;
-  if (posicion.indexOf(".") == -1){
-    resultado.textContent = resultado.textContent  + ".";
-  } else{
-    alert("No se puede ingresar mas puntos decimales");
-  }
+})
 
-}
-cero.onclick = function(e){
-  if (resultado.textContent == "0"){
-    resultado.textContent = "0"
-  } else{
-    resultado.textContent = resultado.textContent  + "0"
+dos2.addEventListener('click', function(){
+  pantalla = document.getElementById("display").innerHTML;
+  if (pantalla == '0'){
+    document.getElementById("display").innerHTML = "2";
+  } else {
+    document.getElementById("display").innerHTML =  pantalla + "2";
   }
-}
-signo.onclick = function(e){
-  if (resultado.textContent != "0") {
-    var valor = resultado.textContent;
+})
+
+tres3.addEventListener('click', function(){
+  pantalla = document.getElementById("display").innerHTML;
+  if (pantalla == '0'){
+    document.getElementById("display").innerHTML = "3";
+  } else {
+    document.getElementById("display").innerHTML =  pantalla = pantalla + "3";
+  }
+})
+
+cuatro4.addEventListener('click', function(){
+  pantalla = document.getElementById("display").innerHTML;
+  if (pantalla == '0'){
+    document.getElementById("display").innerHTML = "4";
+  } else {
+    document.getElementById("display").innerHTML =  pantalla + "4";
+  }
+})
+
+cinco5.addEventListener('click', function(){
+  pantalla = document.getElementById("display").innerHTML;
+  if (pantalla == '0'){
+    document.getElementById("display").innerHTML = "5";
+  } else {
+    document.getElementById("display").innerHTML =  pantalla + "5";
+  }
+})
+
+seis6.addEventListener('click', function(){
+  pantalla = document.getElementById("display").innerHTML;
+  if (pantalla == '0'){
+    document.getElementById("display").innerHTML = "6";
+  } else {
+    document.getElementById("display").innerHTML =  pantalla + "6";
+  }
+})
+
+siete7.addEventListener('click', function(){
+  pantalla = document.getElementById("display").innerHTML;
+  if (pantalla == '0'){
+    document.getElementById("display").innerHTML = "7";
+  } else {
+    document.getElementById("display").innerHTML =  pantalla + "7";
+  }
+})
+
+ocho8.addEventListener('click', function(){
+  pantalla = document.getElementById("display").innerHTML;
+  if (pantalla == '0'){
+    document.getElementById("display").innerHTML = "8";
+  } else {
+    document.getElementById("display").innerHTML =  pantalla + "8";
+  }
+})
+
+nueve9.addEventListener('click', function(){
+  pantalla = document.getElementById("display").innerHTML;
+  if (pantalla == '0'){
+    document.getElementById("display").innerHTML = "9";
+  } else {
+    document.getElementById("display").innerHTML =  pantalla + "9";
+  }
+})
+
+cero.addEventListener('click', function(){
+  pantalla = document.getElementById("display").innerHTML;
+  if (pantalla == '0'){
+    document.getElementById("display").innerHTML = "0";
+  } else {
+    document.getElementById("display").innerHTML =  pantalla + "0";
+  }
+})
+
+puntop.addEventListener('click', function(){
+  pantalla = document.getElementById("display").innerHTML;
+  if (pantalla.indexOf(".") == -1){
+     document.getElementById("display").innerHTML =  pantalla  + ".";
+   } else{
+     alert("No se puede ingresar mas puntos decimales");
+   }
+})
+
+signo.addEventListener('click', function(){
+  pantalla = document.getElementById("display").innerHTML;
+  if (pantalla != "0") {
+      var valor = pantalla;
       if(valor.indexOf('-') == 0)
-        valor = valor.substring(1);
+        document.getElementById("display").innerHTML; = valor.substring(1);
       else
-        valor = '-' + valor;
+        document.getElementById("display").innerHTML = '-' + pantalla;
       resultado.textContent = valor;
   } else{
-    resultado.textContent = "0"
+    document.getElementById("display").innerHTML = "0"
   }
-
-}
-
-limpiar.onclick = function(e){
-    resultado.textContent = "0";
-}
+})
