@@ -17,17 +17,27 @@ limpiar.addEventListener('click', function(){
   document.getElementById("display").innerHTML = "0";
 })
 
+function validar(texto){
+	if (texto.length >7){ //si el texo es mayor a 8
+		var limitado = document.getElementById("display").innerHTML;
+    texto = limitado.substring(length()-1);
+    document.getElementById("display").innerHTML = texto;
+	}
+}
+
 uno1.addEventListener('click', function(){
-  pantalla = document.getElementById("display").innerHTML;
-  if (pantalla == '0'){
-    document.getElementById("display").innerHTML = "1";
-  } else {
-    document.getElementById("display").innerHTML =  pantalla + "1";
-  }
+    pantalla = document.getElementById("display").innerHTML;
+    validar(pantalla);
+    if (pantalla == '0'){
+      document.getElementById("display").innerHTML = "1";
+    } else {
+      document.getElementById("display").innerHTML =  pantalla + "1";
+    }
 })
 
 dos2.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
+  validar(pantalla);
   if (pantalla == '0'){
     document.getElementById("display").innerHTML = "2";
   } else {
@@ -37,6 +47,7 @@ dos2.addEventListener('click', function(){
 
 tres3.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
+  validar(pantalla);
   if (pantalla == '0'){
     document.getElementById("display").innerHTML = "3";
   } else {
@@ -46,6 +57,7 @@ tres3.addEventListener('click', function(){
 
 cuatro4.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
+  validar(pantalla);
   if (pantalla == '0'){
     document.getElementById("display").innerHTML = "4";
   } else {
@@ -55,6 +67,7 @@ cuatro4.addEventListener('click', function(){
 
 cinco5.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
+  validar(pantalla);
   if (pantalla == '0'){
     document.getElementById("display").innerHTML = "5";
   } else {
@@ -64,6 +77,7 @@ cinco5.addEventListener('click', function(){
 
 seis6.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
+  validar(pantalla);
   if (pantalla == '0'){
     document.getElementById("display").innerHTML = "6";
   } else {
@@ -73,6 +87,7 @@ seis6.addEventListener('click', function(){
 
 siete7.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
+  validar(pantalla);
   if (pantalla == '0'){
     document.getElementById("display").innerHTML = "7";
   } else {
@@ -82,6 +97,7 @@ siete7.addEventListener('click', function(){
 
 ocho8.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
+  validar(pantalla);
   if (pantalla == '0'){
     document.getElementById("display").innerHTML = "8";
   } else {
@@ -91,6 +107,7 @@ ocho8.addEventListener('click', function(){
 
 nueve9.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
+  validar(pantalla);
   if (pantalla == '0'){
     document.getElementById("display").innerHTML = "9";
   } else {
@@ -100,6 +117,7 @@ nueve9.addEventListener('click', function(){
 
 cero.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
+  validar(pantalla);
   if (pantalla == '0'){
     document.getElementById("display").innerHTML = "0";
   } else {
@@ -109,6 +127,7 @@ cero.addEventListener('click', function(){
 
 puntop.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
+  validar(pantalla);
   if (pantalla.indexOf(".") == -1){
      document.getElementById("display").innerHTML =  pantalla  + ".";
    } else{
@@ -118,13 +137,13 @@ puntop.addEventListener('click', function(){
 
 signo.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
+  validar(pantalla);
   if (pantalla != "0") {
       var valor = pantalla;
       if(valor.indexOf('-') == 0)
-        document.getElementById("display").innerHTML; = valor.substring(1);
+        document.getElementById("display").innerHTML = valor.substring(1);
       else
         document.getElementById("display").innerHTML = '-' + pantalla;
-      resultado.textContent = valor;
   } else{
     document.getElementById("display").innerHTML = "0"
   }
