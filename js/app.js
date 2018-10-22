@@ -1,26 +1,30 @@
 //VARIABLES-----------------------------------------------
-var uno1 = document.getElementById("1");
-var dos2 = document.getElementById("2");
-var tres3 = document.getElementById("3");
-var cuatro4 = document.getElementById("4");
-var cinco5 = document.getElementById("5");
-var seis6 = document.getElementById("6");
-var siete7 = document.getElementById("7");
-var ocho8 = document.getElementById("8");
-var nueve9 = document.getElementById("9");
-var cero = document.getElementById("0");
-var limpiar = document.getElementById("on");
-var puntop = document.getElementById("punto");
-var signo = document.getElementById("sign");
+var calculadora = {
+  uno1 = document.getElementById("1");
+  dos2 = document.getElementById("2");
+  tres3 = document.getElementById("3");
+  cuatro4 = document.getElementById("4");
+  cinco5 = document.getElementById("5");
+  seis6 = document.getElementById("6");
+  siete7 = document.getElementById("7");
+  ocho8 = document.getElementById("8");
+  nueve9 = document.getElementById("9");
+  cero = document.getElementById("0");
+  limpiar = document.getElementById("on");
+  puntop = document.getElementById("punto");
+  signo = document.getElementById("sign");
+  suma = document.getElementById("mas");
+  resta = document.getElementById("menos");
+  mult = document.getElementById("por");
+  dividir = document.getElementById("dividido");
+  igualres = document.getElementById("igual");
+  efecto = document.getElementsByClassName("tecla");
+}
 var pantalla = "0";
 var operacion = "0";
 var numero1 = "0";
 var numero2 = "0";
-var suma = document.getElementById("mas");
-var resta = document.getElementById("menos");
-var mult = document.getElementById("por");
-var dividir = document.getElementById("dividido");
-var igualres = document.getElementById("igual");
+
 
 // FUNCIONES------------------------------------
 limpiar.addEventListener('click', function(){
@@ -30,6 +34,7 @@ limpiar.addEventListener('click', function(){
   operacion = "";
 })
 
+// *********FUNCION DE CALCULAR LAS OPERACIONES*************
 function calcular(resultado){
   var res = 0;
   switch(operacion){
@@ -46,18 +51,17 @@ function calcular(resultado){
       res = parseFloat(numero1) / parseFloat(numero2);
       break;
   }
-  pantalla = document.getElementById("display").innerHTML; //en caso haya operaciones con decimales
-  validar(pantalla);
+  document.getElementById("display").innerHTML = res;
+  pantalla = document.getElementById("display").innerHTML;
   if (pantalla.indexOf(".") == -1){
      document.getElementById("display").innerHTML = res;
-   } else{
-     document.getElementById("display").innerHTML = res.toFixed(4);
+   } else {
+     document.getElementById("display").innerHTML = res.toFixed(3);
    }
-
 }
 
 function limpiars(){
-  document.getElementById("display").innerHTML = ""
+  document.getElementById("display").innerHTML = "";
 }
 
 function validar(texto){
@@ -65,20 +69,132 @@ function validar(texto){
 		var limitado = document.getElementById("display").innerHTML;
     texto = limitado.substring(length()-1);
     document.getElementById("display").innerHTML = texto;
+    return texto;
 	}
 }
-function cambiar() {
-    document.getElementById("1").style.height = "50px";
-    document.getElementById("1").style.fontSize = "4em";
+
+//----------EFECTOS DE LAS TECLAS-------------------------------------------
+function botonon1(){
+    document.getElementById("on").style.transform = "scale(0.9, 0.9)";
 }
-function cambiar2() {
-    document.getElementById("1").style.height = "62.91px";
-    document.getElementById("1").style.fontSize = "6em";
+function botonon2(){
+    document.getElementById("on").style.transform = "scale(1, 1)";
+}
+function botonsg1(){
+    document.getElementById("sign").style.transform = "scale(0.9, 0.9)";
+}
+function botonsg2(){
+    document.getElementById("sign").style.transform = "scale(1, 1)";
+}
+function botonrz1(){
+    document.getElementById("raiz").style.transform = "scale(0.9, 0.9)";
+}
+function botonrz2(){
+    document.getElementById("raiz").style.transform = "scale(1, 1)";
+}
+function botondiv1(){
+    document.getElementById("dividido").style.transform = "scale(0.9, 0.9)";
+}
+function botondiv2(){
+    document.getElementById("dividido").style.transform = "scale(1, 1)";
+}
+function botonx1(){
+    document.getElementById("por").style.transform = "scale(0.9, 0.9)";
+}
+function botonx2(){
+    document.getElementById("por").style.transform = "scale(1, 1)";
+}
+function botonmn1(){
+    document.getElementById("menos").style.transform = "scale(0.9, 0.9)";
+}
+function botonmn2(){
+    document.getElementById("menos").style.transform = "scale(1, 1)";
+}
+
+function boton11(){
+    document.getElementById("1").style.transform = "scale(0.9, 0.9)";
+}
+function boton12(){
+    document.getElementById("1").style.transform = "scale(1, 1)";
+}
+function boton21(){
+    document.getElementById("2").style.transform = "scale(0.9, 0.9)";
+}
+function boton22(){
+    document.getElementById("2").style.transform = "scale(1, 1)";
+}
+function boton31(){
+    document.getElementById("3").style.transform = "scale(0.9, 0.9)";
+}
+function boton32(){
+    document.getElementById("3").style.transform = "scale(1, 1)";
+}
+
+function boton41(){
+    document.getElementById("4").style.transform = "scale(0.9, 0.9)";
+}
+function boton42(){
+    document.getElementById("4").style.transform = "scale(1, 1)";
+}
+function boton51(){
+    document.getElementById("5").style.transform = "scale(0.9, 0.9)";
+}
+function boton52(){
+    document.getElementById("5").style.transform = "scale(1, 1)";
+}
+function boton61(){
+    document.getElementById("6").style.transform = "scale(0.9, 0.9)";
+}
+function boton62(){
+    document.getElementById("6").style.transform = "scale(1, 1)";
+}
+
+function boton71(){
+    document.getElementById("7").style.transform = "scale(0.9, 0.9)";
+}
+function boton72(){
+    document.getElementById("7").style.transform = "scale(1, 1)";
+}
+function boton81(){
+    document.getElementById("8").style.transform = "scale(0.9, 0.9)";
+}
+function boton82(){
+    document.getElementById("8").style.transform = "scale(1, 1)";
+}
+function boton91(){
+    document.getElementById("9").style.transform = "scale(0.9, 0.9)";
+}
+function boton92(){
+    document.getElementById("9").style.transform = "scale(1, 1)";
+}
+
+function boton01(){
+    document.getElementById("0").style.transform = "scale(0.9, 0.9)";
+}
+function boton02(){
+    document.getElementById("0").style.transform = "scale(1, 1)";
+}
+function botonp1(){
+    document.getElementById("punto").style.transform = "scale(0.9, 0.9)";
+}
+function botonp2(){
+    document.getElementById("punto").style.transform = "scale(1, 1)";
+}
+function botoni1(){
+    document.getElementById("igual").style.transform = "scale(0.9, 0.9)";
+}
+function botoni2(){
+    document.getElementById("igual").style.transform = "scale(1, 1)";
+}
+function botonm1(){
+    document.getElementById("mas").style.transform = "scale(0.9, 0.9)";
+}
+function botonm2(){
+    document.getElementById("mas").style.transform = "scale(1, 1)";
 }
 
 //LISTENER DE LOS BOTONES------------------------------
 uno1.addEventListener('click', function(){
-    uno1.addEventListener("onclick", cambiar());
     pantalla = document.getElementById("display").innerHTML;
     validar(pantalla);
     if (pantalla == '0'){
@@ -86,7 +202,6 @@ uno1.addEventListener('click', function(){
     } else {
       document.getElementById("display").innerHTML =  pantalla + "1";
     }
-    uno1.addEventListener("mouseup", cambiar2());
 })
 
 dos2.addEventListener('click', function(){

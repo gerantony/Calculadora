@@ -8,7 +8,7 @@
   <title>Calculadora</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
+<body onload = "limpiar;">
   <div class="fondo">
     <div class="titulo-container">
       <h1>¡No pierdas <span>la cuenta!</span></h1>
@@ -25,33 +25,33 @@
       </div>
 
       <div class="teclado">
-        <img src="image/ON.png" alt="On" class="tecla" id="on"/>
-        <img src="image/sign.png" alt="signo" class="tecla" id="sign"/>
-        <img src="image/raiz.png" alt="raiz" class="tecla" id="raiz"/>
-        <img src="image/dividido.png" alt="dividido" class="tecla divide" id="dividido"/>
+        <img onmousedown="botonon1()" onmouseup="botonon2()" src="image/ON.png" alt="On" class="tecla" id="on"/>
+        <img onmousedown="botonsg1()" onmouseup="botonsg2()" src="image/sign.png" alt="signo" class="tecla" id="sign"/>
+        <img onmousedown="botonrz1()" onmouseup="botonrz2()" src="image/raiz.png" alt="raiz" class="tecla" id="raiz"/>
+        <img onmousedown="botondiv1()" onmouseup="botondiv2()"src="image/dividido.png" alt="dividido" class="tecla divide" id="dividido"/>
 
-        <img src="image/7.png" alt="7" class="tecla" id="7"/>
-        <img src="image/8.png" alt="8" class="tecla" id="8"/>
-        <img src="image/9.png" alt="9" class="tecla" id="9"/>
-        <img src="image/por.png" alt="por" class="tecla multiplica" id="por"/>
+        <img onmousedown="boton71()" onmouseup="boton72()" src="image/7.png" alt="7" class="tecla" id="7"/>
+        <img onmousedown="boton81()" onmouseup="boton82()" src="image/8.png" alt="8" class="tecla" id="8"/>
+        <img onmousedown="boton91()" onmouseup="boton92()" src="image/9.png" alt="9" class="tecla" id="9"/>
+        <img onmousedown="botonx1()" onmouseup="botonx2()" src="image/por.png" alt="por" class="tecla multiplica" id="por"/>
 
-        <img src="image/4.png" alt="4" class="tecla" id="4"/>
-        <img src="image/5.png" alt="5" class="tecla" id="5"/>
-        <img src="image/6.png" alt="6" class="tecla" id="6"/>
-        <img src="image/menos.png" alt="menos" class="tecla resta" id="menos"/>
+        <img onmousedown="boton41()" onmouseup="boton42()" src="image/4.png" alt="4" class="tecla" id="4"/>
+        <img onmousedown="boton51()" onmouseup="boton52()" src="image/5.png" alt="5" class="tecla" id="5"/>
+        <img onmousedown="boton61()" onmouseup="boton62()" src="image/6.png" alt="6" class="tecla" id="6"/>
+        <img onmousedown="botonmn1()" onmouseup="botonmn2()" src="image/menos.png" alt="menos" class="tecla resta" id="menos"/>
 
         <div class="row">
           <div class="col1">
-            <img src="image/1.png" alt="1" class="tecla" id="1"/>
-            <img src="image/2.png" alt="2" class="tecla" id="2"/>
-            <img src="image/3.png" alt="3" class="tecla" id="3"/>
+            <img onmousedown="boton11()" onmouseup="boton12()" src="image/1.png" alt="1" class="tecla" id="1"/>
+            <img onmousedown="boton21()" onmouseup="boton22()" src="image/2.png" alt="2" class="tecla" id="2"/>
+            <img onmousedown="boton31()" onmouseup="boton32()"src="image/3.png" alt="3" class="tecla" id="3"/>
 
-            <img src="image/0.png" alt="0" class="tecla" id="0"/>
-            <img src="image/punto.png" alt="punto" class="tecla" id="punto"/>
-            <img src="image/igual.png" alt="igual" class="tecla" id="igual"/>
+            <img onmousedown="boton01()" onmouseup="boton02()" src="image/0.png" alt="0" class="tecla" id="0"/>
+            <img onmousedown="botonp1()" onmouseup="botonp2()" src="image/punto.png" alt="punto" class="tecla" id="punto"/>
+            <img onmousedown="botoni1()" onmouseup="botoni2()" src="image/igual.png" alt="igual" class="tecla" id="igual"/>
           </div>
           <div class="col2">
-            <img src="image/mas.png" alt="mas" class="tecla suma" id="mas"/>
+            <img onmousedown="botonm1()" onmouseup="botonm2()" src="image/mas.png" alt="mas" class="tecla suma" id="mas"/>
           </div>
 
         </div>
