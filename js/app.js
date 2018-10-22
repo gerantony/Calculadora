@@ -1,25 +1,24 @@
 //VARIABLES-----------------------------------------------
 var calculadora = {
-  uno1 = document.getElementById("1");
-  dos2 = document.getElementById("2");
-  tres3 = document.getElementById("3");
-  cuatro4 = document.getElementById("4");
-  cinco5 = document.getElementById("5");
-  seis6 = document.getElementById("6");
-  siete7 = document.getElementById("7");
-  ocho8 = document.getElementById("8");
-  nueve9 = document.getElementById("9");
-  cero = document.getElementById("0");
-  limpiar = document.getElementById("on");
-  puntop = document.getElementById("punto");
-  signo = document.getElementById("sign");
-  suma = document.getElementById("mas");
-  resta = document.getElementById("menos");
-  mult = document.getElementById("por");
-  dividir = document.getElementById("dividido");
-  igualres = document.getElementById("igual");
-  efecto = document.getElementsByClassName("tecla");
-}
+  uno1 : document.getElementById("1"),
+  dos2 : document.getElementById("2"),
+  tres3 : document.getElementById("3"),
+  cuatro4 : document.getElementById("4"),
+  cinco5 : document.getElementById("5"),
+  seis6 : document.getElementById("6"),
+  siete7 : document.getElementById("7"),
+  ocho8 : document.getElementById("8"),
+  nueve9 : document.getElementById("9"),
+  cero : document.getElementById("0"),
+  limpiarr : document.getElementById("on"),
+  puntop : document.getElementById("punto"),
+  signo : document.getElementById("sign"),
+  suma : document.getElementById("mas"),
+  resta : document.getElementById("menos"),
+  mult : document.getElementById("por"),
+  dividir : document.getElementById("dividido"),
+  igualres : document.getElementById("igual")
+};
 var pantalla = "0";
 var operacion = "0";
 var numero1 = "0";
@@ -27,12 +26,7 @@ var numero2 = "0";
 
 
 // FUNCIONES------------------------------------
-limpiar.addEventListener('click', function(){
-  document.getElementById("display").innerHTML = "0";
-  numero1 = "0";
-  numero2 = "0";
-  operacion = "";
-})
+
 
 // *********FUNCION DE CALCULAR LAS OPERACIONES*************
 function calcular(resultado){
@@ -60,6 +54,12 @@ function calcular(resultado){
    }
 }
 
+function resetear(){
+  document.getElementById("display").innerHTML = "0";
+  numero1 = "0";
+  numero2 = "0";
+  operacion = "";
+}
 function limpiars(){
   document.getElementById("display").innerHTML = "";
 }
@@ -194,7 +194,11 @@ function botonm2(){
 }
 
 //LISTENER DE LOS BOTONES------------------------------
-uno1.addEventListener('click', function(){
+calculadora.limpiarr.addEventListener('click', function(){
+  resetear();
+})
+
+calculadora.uno1.addEventListener('click', function(){
     pantalla = document.getElementById("display").innerHTML;
     validar(pantalla);
     if (pantalla == '0'){
@@ -204,7 +208,7 @@ uno1.addEventListener('click', function(){
     }
 })
 
-dos2.addEventListener('click', function(){
+calculadora.dos2.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
   validar(pantalla);
   if (pantalla == '0'){
@@ -214,7 +218,7 @@ dos2.addEventListener('click', function(){
   }
 })
 
-tres3.addEventListener('click', function(){
+calculadora.tres3.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
   validar(pantalla);
   if (pantalla == '0'){
@@ -224,7 +228,7 @@ tres3.addEventListener('click', function(){
   }
 })
 
-cuatro4.addEventListener('click', function(){
+calculadora.cuatro4.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
   validar(pantalla);
   if (pantalla == '0'){
@@ -234,7 +238,7 @@ cuatro4.addEventListener('click', function(){
   }
 })
 
-cinco5.addEventListener('click', function(){
+calculadora.cinco5.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
   validar(pantalla);
   if (pantalla == '0'){
@@ -244,7 +248,7 @@ cinco5.addEventListener('click', function(){
   }
 })
 
-seis6.addEventListener('click', function(){
+calculadora.seis6.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
   validar(pantalla);
   if (pantalla == '0'){
@@ -254,7 +258,7 @@ seis6.addEventListener('click', function(){
   }
 })
 
-siete7.addEventListener('click', function(){
+calculadora.siete7.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
   validar(pantalla);
   if (pantalla == '0'){
@@ -264,7 +268,7 @@ siete7.addEventListener('click', function(){
   }
 })
 
-ocho8.addEventListener('click', function(){
+calculadora.ocho8.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
   validar(pantalla);
   if (pantalla == '0'){
@@ -274,7 +278,7 @@ ocho8.addEventListener('click', function(){
   }
 })
 
-nueve9.addEventListener('click', function(){
+calculadora.nueve9.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
   validar(pantalla);
   if (pantalla == '0'){
@@ -284,7 +288,7 @@ nueve9.addEventListener('click', function(){
   }
 })
 
-cero.addEventListener('click', function(){
+calculadora.cero.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
   validar(pantalla);
   if (pantalla == '0'){
@@ -294,7 +298,7 @@ cero.addEventListener('click', function(){
   }
 })
 
-puntop.addEventListener('click', function(){
+calculadora.puntop.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
   validar(pantalla);
   if (pantalla.indexOf(".") == -1){
@@ -304,7 +308,7 @@ puntop.addEventListener('click', function(){
    }
 })
 
-signo.addEventListener('click', function(){
+calculadora.signo.addEventListener('click', function(){
   pantalla = document.getElementById("display").innerHTML;
   validar(pantalla);
   if (pantalla != "0") {
@@ -318,28 +322,28 @@ signo.addEventListener('click', function(){
   }
 })
 
-suma.addEventListener('click', function(){
+calculadora.suma.addEventListener('click', function(){
   numero1 = document.getElementById("display").innerHTML;
   operacion = "+";
   limpiars();
 })
-resta.addEventListener('click', function(){
+calculadora.resta.addEventListener('click', function(){
   numero1 = document.getElementById("display").innerHTML;
   operacion = "-";
   limpiars();
 })
-mult.addEventListener('click', function(){
+calculadora.mult.addEventListener('click', function(){
   numero1 = document.getElementById("display").innerHTML;
   operacion = "x";
   limpiars();
 })
-dividir.addEventListener('click', function(){
+calculadora.dividir.addEventListener('click', function(){
   numero1 = document.getElementById("display").innerHTML;
   operacion = "/";
   limpiars();
 })
 
-igualres.addEventListener('click', function(){
+calculadora.igualres.addEventListener('click', function(){
   numero2 = document.getElementById("display").innerHTML;
   calcular();
 })
